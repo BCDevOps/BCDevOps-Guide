@@ -53,33 +53,8 @@ starter apps
 
 
 New Project Setup
------------------
-
-1. Setup the OpenShift project spaces.  At minimum there must be a Tools and Dev OpenShift projects.
-2. Setup a Github repositories to store code for the project.
-	1. A small project that has a single application deployment can have just one repository
-	2. Medium sized projects can use one repository with sub-directories, and then use the context directory
-	3. It is recommended that as soon as you have frequent updates occurring to multiple areas of the repository that affect multiple deployments, that you split the repository up.  This simplifies the structure of the repository and avoids the need for complex continuous integration setup.
-4. Create and OpenShift / Templates folder in the repository
-5. Create a build template containing the following:
-	1. Supporting deployment configurations needed to perform the builds
-		1. SonarQube
-		2. SonarQube Postgresql instance
-		3. Do not create a deployment for the Jenkins Pipeline, allow the platform to create that.
-	2. Image streams that will be used to store the application's images
-	3. Build configurations that will create the images used for deployment of the app.
-	4. Any secrets needed for the build
-	5. A pipeline definition for each significant build configuration in the project.
-		1. The pipeline definition should exist as a single Jenkinsfile
-		2. You may specify a specific name for the Jenkinsfile if you need to store multiple pipelines in a single repository
-		3. The Jenkinsfile should be located in the same repository as the code it supports
-		4. Do not have blocking statements such as "input" within a node block; this will cause the slave to exist forever, resulting in resources being consumed.  
-4. Verify that the build configurations work
-5. Verify that the pipeline works
-6. Create a deployment template to deploy the image or images created by the build
-7. Implement basic functional tests as part of the pipeline to verify the application is online
-8. Document any special steps within the OpenShift/Templates/Readme.md file
-
+----------------
+[New Project Setup Sub Page](NewProjectSetup.md)
 
 Jenkins
 -------
