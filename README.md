@@ -118,15 +118,10 @@ Temporarily point the pipeline build configuration at your own repository.  This
 3. Observe the results
 4. Change the pipeline build configuration back to point to the main repository
 
-TROUBLESHOOTING
+TROUBLESHOOTING AND DAMAGE CONTROL
 ---------------
 
-| Area | Problem | Solution |
-| ---- | ------- | -------- |
-| Jenkins | Slaves do not start, following text: `Using 64 bit Java since OPENSHIFT_JENKINS_JVM_ARCH is not set | Set Jenkins config setting - Maven Kubernetes option, new environment variable OPENSHIFT_JENKINS_JVM_ARCH with value of x86_64 |
-| Jenkins | Slaves start but cannot communicate with the master | Set the Kubernetes Jenkins URL and JNLP fields to an appropriate value. |
-| OpenShift / Jenkins | OpenShift pipeline builds appear "stuck" - they start by may be at the running stage for hours. Viewing the console logs for the jenkins pod shows that there are problems deleting a Jenkins job. | Login to Jenkins and manually delete the job.  If you are presented with an error, rsh to the Jenkins pod and use the rm command to delete the folder in question, and retry the delete from the Jenkins UI. |
-| Jenkins | Jenkins marks a build as failed after 15 minutes, but the build succeeds in OpenShift | By default the limit on a build is 15 minutes.  Adjust the OpenShift build timeout in the Jenkins configuration to allow for a longer build. |
+[Troubleshooting and Damage Control](Troubleshooting.md) have been moved to separate document.
 
 
 Reference Architectures
