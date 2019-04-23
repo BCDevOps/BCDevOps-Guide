@@ -1,3 +1,5 @@
+****NOTE: This Repository has been set to ARCHIVED and retained for reference only.  It was very useful when it was initially developed but it has not been actively curated or updated by the DevOps team. It now contains at least some out of date or innaccurate information that may confuse or be counter-productive unsuspecting teams.  Please refer to [DevHub](https://developer.gov.bc.ca) for the latest resources related to developer project setup, DevOps within BC Gov, etc.****
+
 # BCDevOps-Guide
 
 Introduction
